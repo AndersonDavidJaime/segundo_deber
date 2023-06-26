@@ -40,9 +40,9 @@ public class MainActivity extends AppCompatActivity implements Asynchtask {
 
             JSONObject datos = JSONlista.getJSONObject(i);
             ListaDatos = ListaDatos +"\n"+
-                    "\n"+"Nombre:"+datos.getString("firstName").toString() +"\n "+
-                    "Edad:"+datos.getString("age").toString()+"\n"+
-                    "Correo:"+datos.getString("email");
+                    datos.getString("firstName").toString() +", "+
+                    datos.getString("age").toString()+", "+
+                    datos.getString("email");
 
         }
         txt.setText(ListaDatos);
